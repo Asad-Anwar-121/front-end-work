@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  button{
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+ 
+   
+
+  }
+
+
+</style>
+<body>
+  
+<button class="button" id="grey"> click me</button> 
+
+
+
+
+    <script>
+        
+
+
+
+
+
+        const button = document.getElementById('grey');
+        const body = document.body;
+
+        button.addEventListener('click', function() {
+            button.style.backgroundColor = getRandomColor();
+        });
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+
+
+        // const button = document.getElementById('grey');
+        // const body = document.body;
+
+        // button.addEventListener('click', function() {
+        //     if(button.style.backgroundColor =="transparent"){
+        //       button.style.backgroundColor ="red";
+        //     }
+        //     else{
+        //       button.style.backgroundColor ="transparent";
+        //     }
+        // });
+        // const buttons = document.querySelectorAll('.button');
+        // const body = document.querySelector('body');
+         
+
+      
+        //     buttons.forEach(function(button){
+        //     button.addEventListener('click',function(e){
+        //         if(e.target.id === 'grey'){
+        //             body.style.backgroundColor = 'grey';
+        //         }
+        //         if(e.target.id === 'red'){
+        //             body.style.backgroundColor = 'red';
+        //         }
+
+        //     })
+
+        // })
+    </script>
+</body>
+</html>

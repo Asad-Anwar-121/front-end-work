@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="flipper.css">
+<style>
+    .center{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    
+}
+button{
+    padding:10px;
+    border-radius:999px;
+    background-color:white;
+    font-size:20px;
+ 
+    
+}
+</style>
+<body>
+    <div class="center">
+        <button id="button" class="button">Click me</button>
+        
+        <p id="colorName"></p>
+    </div>
+    <script>
+const button = document.getElementById("button")
+const body = document.body;
+const color = ["red","blue","green","yellow"]
+const colorNameElement = document.getElementById("colorName");
+
+button.addEventListener('click',function(){
+const randomColor = getRandomColor();
+body.style.backgroundColor =  randomColor;
+colorNameElement.textContent = randomColor.charAt(0).toUpperCase()+ randomColor.slice(1)
+
+})
+function getRandomColor(){
+   const randomIndex = Math.floor(Math.random()*color.length);
+   return color[randomIndex];
+}
+    </script>
+</body>
+</html>

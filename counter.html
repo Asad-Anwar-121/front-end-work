@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="counter.css">
+</head>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    .title , .center  , .reset{
+    
+        justify-content:center;
+        align-items:center;
+        display: flex;
+        flex-direction:column;
+     margin-top:20px;
+    }
+     button ,input{
+         padding:10px;
+         text-align:center;
+         font-size:20px;
+         margin-right:5px;
+      border:2px solid;
+      
+     }
+    button{
+        background-color:red;
+        color:white;
+    
+        border:2px solid transparent;
+    }
+    </style>
+<body>
+    <h1 class="title">Counter</h1>
+    <div class="center">
+        
+        <div>
+        <button id="left" onclick="decrement()">Decrement</button>
+        <input class="counter" id="counter"  value="0"></input>
+        <button id="Right" onclick="increment()">Increment</button>
+
+    </div>
+    
+    
+    </div>
+    <div class="reset" id="reset" onclick="reset()"><button>Reset</button>
+
+    </div>
+    
+    
+    <script> 
+        
+            
+
+        let count = 0;
+    const counterElement = document.getElementById("counter");
+
+    function increment() {
+        count++;
+        counterElement.value = count;
+    }
+
+    function decrement() {
+        if (count > 0) {
+            count--;
+            counterElement.value = count;
+        }}
+
+        function reset() {
+      
+        counterElement.value = 0;
+        count=0;
+    }
+
+        
+
+    </script>
+
+
+</body>
+</html>
